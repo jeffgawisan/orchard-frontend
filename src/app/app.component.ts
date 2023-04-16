@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'skill-test-trial';
+  title = 'skill-test';
+  pageContent = {
+    title: "ANSWER YOUR BODY'S NEED",
+    description: "The way ingredients are sourced affects the way nourish our bodies. Author Mark Schatzer believes our body naturally develops an appetite for the foods and nutrients it needs to be healthy, but that artificial flavourings are getting in the way. This can be reversed by focusing on high-quality ingredients and being mindful as your appetite guides you to consume accourding to your body's needs",
+    moreDetails: {
+      title: 'BE MINDFUL',
+      description: "Sourcing lolcal or organic food is a good way to start being more mindful about what your'e cooking and eating."
+    },
+    images: [
+      { desktop: "/assets/images/component-01/Image-01@2x.jpg", mobile: "/assets/images/component-01/Image-01.jpg" },
+      { desktop: "/assets/images/component-01/Image-02@2x.jpg", mobile: "/assets/images/component-01/Image-02.jpg" },
+      { desktop: "/assets/images/component-01/Image-03@2x.jpg", mobile: "/assets/images/component-01/Image-03.jpg" }
+    ]
+  }
 }
