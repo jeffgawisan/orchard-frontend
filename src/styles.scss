@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@font-face {
+    font-family: "open-sans";
+    src: url("/assets/fonts/OpenSans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "open-sans-light";
+    src: url("/assets/fonts/OpenSans/OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "open-sans-medium";
+    src: url("/assets/fonts/OpenSans/OpenSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: "open-sans-semibold";
+    src: url("/assets/fonts/OpenSans/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "open-sans-bold";
+    src: url("/assets/fonts/OpenSans/OpenSans-Bold.ttf");
+}
+
+body {
+    background: #0e1414;
+    font-family: "open-sans";
+}
