@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 interface img {
     desktop: string,
@@ -8,9 +8,12 @@ interface img {
 @Component({
     selector: 'app-tile-content',
     templateUrl: './tile-content.component.html',
-    styleUrls: ['./tile-content.component.scss']
+    styleUrls: ['./tile-content.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class TileContentComponent implements OnInit {
+
+    closeResult = '';
 
     @Input() title = "";
     @Input() description = "";
@@ -21,4 +24,10 @@ export class TileContentComponent implements OnInit {
     ngOnInit() {
     }
 
+    /**
+     * Capture Read More anchor clicks
+     */
+    onSelectReadMore() {
+        console.log(`Clicked read more title:${this.title}`);
+    }
 }

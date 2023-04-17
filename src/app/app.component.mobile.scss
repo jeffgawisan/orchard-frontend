@@ -26,13 +26,19 @@
             ngb-carousel,
             .carousel-inner,
             .carousel-item,
-            img {
+            app-image,
+            app-image .image-container,
+            app-image img {
                 height: 100%;
                 width: 100%;
             }
 
-            img {
-                object-fit: none;
+            app-image {
+                display: block;
+
+                img {
+                    object-fit: contain;
+                }
             }
         }
     }

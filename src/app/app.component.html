@@ -1,20 +1,18 @@
+<!-- TOP COMPONENT (display's: Image Carousel and Descripiton) -->
 <section class="container">
     <div class="featured-content">
         <div class="image-carousel" [ngClass]="['items-' + featuredContent.images.length]">
             <!-- IMAGE CAROUSEL DISPLAYED ONLY ON DESKTOP -->
             <div class="image-desktop">
-                <span *ngFor="let image of featuredContent.images">
-                    <img alt="image" [src]="image.desktop">
-                </span>
+                <app-image *ngFor="let image of featuredContent.images" [desktopSrc]="image.desktop"></app-image>
             </div>
 
             <!-- IMAGE CAROUSEL DISPLAYED ONLY ON MOBILE -->
             <div class="image-mobile">
-                <!-- @TODO remove interval -->
-                <ngb-carousel [interval]="999999">
+                <ngb-carousel>
                     <ng-container *ngFor="let image of featuredContent.images">
                         <ng-template ngbSlide>
-                            <img alt="image" [src]="image.mobile" alt="image">
+                            <app-image [desktopSrc]="image.desktop" [mobileSrc]="image.mobile"></app-image>
                         </ng-template>
                     </ng-container>
                 </ngb-carousel>
@@ -30,6 +28,8 @@
         </div>
     </div>
 </section>
+
+<!-- BOTTOM COMPONENT (display's: 3 set of tiles display) -->
 <section class="container">
     <div class="tile-content">
         <h2>{{tileContent.title}}</h2>

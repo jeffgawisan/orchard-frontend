@@ -1,7 +1,6 @@
 <div class="tile-content-container">
-    <img class="image-desktop" [src]="image.desktop" alt="image">
-    <img class="image-mobile" [src]="image.mobile" alt="image">
+    <app-image [desktopSrc]="image.desktop" [mobileSrc]="image.mobile"></app-image>
     <h2>{{title}}</h2>
     <p>{{description}}</p>
-    <a href="#">READ MORE</a>
+    <a href="#" (click)="onSelectReadMore()">READ MORE</a>
 </div>

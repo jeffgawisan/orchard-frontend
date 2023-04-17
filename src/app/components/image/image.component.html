@@ -1,0 +1,11 @@
+<div class="image-container">
+    <img class="desktop" *ngIf="desktopSrc" [src]="desktopSrc" alt="Image" (click)="open(content, desktopSrc)">
+    <img class="mobile" *ngIf="mobileSrc" [src]="mobileSrc" alt="Image" (click)="open(content, mobileSrc)">
+</div>
+
+<!-- MODAL POPUP TEMPLATE-->
+<ng-template #content let-modal>
+    <div class="modal-body">
+        <img [src]="desktopSrc">
+    </div>
+</ng-template>

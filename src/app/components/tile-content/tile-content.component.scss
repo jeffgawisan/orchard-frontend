@@ -1,23 +1,14 @@
 .tile-content-container {
     width: 100%;
 
-    img {
-        object-fit: contain;
-        width: 100%;
+    app-image {
+        display: block;
         margin-bottom: 24px;
 
-        &.image-desktop {
-            display: none;
-
-            @media (min-width: 768px) {
-                display: block;
-            }
-        }
-
-        &.image-mobile {
-            @media (min-width: 768px) {
-                display: none;
-            }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 
