@@ -1,0 +1,46 @@
+.tile-content-container {
+    width: 100%;
+
+    img {
+        object-fit: contain;
+        width: 100%;
+        margin-bottom: 24px;
+
+        &.image-desktop {
+            display: none;
+
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+
+        &.image-mobile {
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    h2 {
+        font-family: 'open-sans-medium';
+        font-size: 14px;
+        color: #fff;
+    }
+
+    p {
+        font-family: 'open-sans-light';
+        font-size: 12px;
+        color: #d3d4d4;
+    }
+
+    a {
+        font-family: 'open-sans-medium';
+        font-size: 14px;
+        line-height: 14px;
+        color: #fff;
+        border-bottom: 2px solid #ce1331;
+        padding-bottom: 3px;
+        display: inline-block;
+        text-decoration: none;
+    }
+}

@@ -30,3 +30,13 @@
         </div>
     </div>
 </section>
+<section class="container">
+    <div class="tile-content">
+        <h2>ALL THE LATEST</h2>
+        <div class="tile-list">
+            <ng-container *ngFor="let item of tileContents">
+                <app-tile-content [title]="item.title" [description]="item.description" [image]="item.image"></app-tile-content>
+            </ng-container>
+        </div>
+    </div>
+</section>

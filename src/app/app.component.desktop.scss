@@ -73,4 +73,12 @@
             }
         }
     }
+
+    .tile-content {
+        .tile-list {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        }
+    }
 }
