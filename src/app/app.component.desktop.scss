@@ -1,0 +1,76 @@
+@media (min-width: 1024px) {
+    .featured-content {
+        flex-direction: row;
+        height: 500px;
+
+        .image-carousel {
+            flex: 60%;
+            width: unset;
+            height: 100%;
+            margin-right: 40px;
+
+            .image-desktop {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+
+                > span {
+                    display: flex;
+                }
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            // STYLES TO SLICES
+            &.items-3 {
+                .image-desktop span:nth-child(1) {
+                    width: 50%;
+                    height: 100%;
+                    padding-right: 6px;
+                }
+
+                .image-desktop span:nth-child(2) {
+                    width: 50%;
+                    height: 50%;
+                    padding-left: 6px;
+                    padding-bottom: 6px;
+                }
+
+                .image-desktop span:nth-child(3) {
+                    width: 50%;
+                    height: 50%;
+                    padding-left: 6px;
+                    padding-top: 6px;
+                }
+            }
+
+
+            // HIDE CAROUSEL
+            ngb-carousel {
+                width: 0;
+                height: 0;
+
+                .carousel-inner,
+                .carousel-control-prev,
+                .carousel-control-next {
+                    display: none;
+                }
+            }
+        }
+
+        .content-details {
+            flex: 40%;
+            padding: 0;
+
+            .title {
+                text-align: left;
+            }
+        }
+    }
+}

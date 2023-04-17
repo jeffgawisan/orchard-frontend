@@ -1,19 +1,32 @@
-<section>
-  <div class="container">
+<section class="container">
     <div class="featured-content">
-      <div class="image-carousel" [ngClass]="['items-' + pageContent.images.length]">
-        <ng-container *ngFor="let image of pageContent.images">
-          <div class="image-container">
-            <img class="image-desktop" src="{{image.desktop}}" >
-            <img class="image-mobile" src="{{image.mobile}}">
-          </div>
-        </ng-container>
-      </div>
-      <div class="description">
-        <h2 [innerHTML]="pageContent.title"></h2>
-        <p [innerHTML]="pageContent.description"></p>
-      </div>
+        <div class="image-carousel" [ngClass]="['items-' + featuredContent.images.length]">
+            <!-- IMAGE CAROUSEL DISPLAYED ONLY ON DESKTOP -->
+            <div class="image-desktop">
+                <span *ngFor="let image of featuredContent.images">
+                    <img alt="image" [src]="image.desktop">
+                </span>
+            </div>
+
+            <!-- IMAGE CAROUSEL DISPLAYED ONLY ON MOBILE -->
+            <div class="image-mobile">
+                <!-- @TODO remove interval -->
+                <ngb-carousel [interval]="999999">
+                    <ng-container *ngFor="let image of featuredContent.images">
+                        <ng-template ngbSlide>
+                            <img alt="image" [src]="image.mobile" alt="image">
+                        </ng-template>
+                    </ng-container>
+                </ngb-carousel>
+            </div>
+        </div>
+        <div class="content-details">
+            <h1 class="title">{{featuredContent.title}}</h1>
+            <p class="description">{{featuredContent.description}}</p>
+            <div class="more-description">
+                <h2>{{featuredContent.moreDetails.title}}</h2>
+                <p>{{featuredContent.moreDetails.description}}</p>
+            </div>
+        </div>
     </div>
-    <img src="/assets/348908478.png" alt="">
-  </div>
 </section>
