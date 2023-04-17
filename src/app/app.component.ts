@@ -8,6 +8,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
     title = 'skill-test';
+
     featuredContent = {
         title: "ANSWER YOUR BODY'S NEED",
         description:
@@ -23,7 +24,7 @@ export class AppComponent {
                 mobile: '/assets/images/component-01/Image-01.jpg',
             },
             {
-                desktop: '/assets/images/component-01/Image-02@2x.jpg'  ,
+                desktop: '/assets/images/component-01/Image-02@2x.jpg',
                 mobile: '/assets/images/component-01/Image-02.jpg',
             },
             {
@@ -33,30 +34,33 @@ export class AppComponent {
         ],
     };
 
-    tileContents = [
-        {
-            title: 'Summer Lunch Menu By Mark Best',
-            description: "AEG ambasador Mark Best's summer eats are guaranteed to help you make the most of the warmer weather and enterntaining at home.",
-            image: {
-                desktop: "/assets/images/component-02/Image-01@2x.jpg",
-                mobile: "/assets/images/component-02/Image-01.jpg"
+    tileContent = {
+        title: 'ALL THE LATEST',
+        list: [
+            {
+                title: 'Summer Lunch Menu By Mark Best',
+                description: "AEG ambasador Mark Best's summer eats are guaranteed to help you make the most of the warmer weather and enterntaining at home.",
+                image: {
+                    desktop: "/assets/images/component-02/Image-01@2x.jpg",
+                    mobile: "/assets/images/component-02/Image-01.jpg"
+                }
+            },
+            {
+                title: 'A Tranditional Christmas Eve, Mark Best Style',
+                description: "One of Australia's best and AEG ambassador, Mark Best, shares his favourite Christmas Eve menu which is sure to impress your guests.",
+                image: {
+                    desktop: "/assets/images/component-02/Image-02@2x.jpg",
+                    mobile: "/assets/images/component-02/Image-02.jpg"
+                }
+            },
+            {
+                title: 'Taking Taste Further',
+                description: "This exclusive cookbook gives you all the know-how you need. We've designed it to make sure you get the most of our products - and the best out of your food.",
+                image: {
+                    desktop: "/assets/images/component-02/Image-03@2x.jpg",
+                    mobile: "/assets/images/component-02/Image-03.jpg"
+                }
             }
-        },
-        {
-            title: 'A Tranditional Christmas Eve, Mark Best Style',
-            description: "One of Australia's best and AEG ambassador, Mark Best, shares his favourite Christmas Eve menu which is sure to impress your guests.",
-            image: {
-                desktop: "/assets/images/component-02/Image-02@2x.jpg",
-                mobile: "/assets/images/component-02/Image-02.jpg"
-            }
-        },
-        {
-            title: 'Taking Taste Further',
-            description: "This exclusive cookbook gives you all the know-how you need. We've designed it to make sure you get the most of our products - and the best out of your food.",
-            image: {
-                desktop: "/assets/images/component-02/Image-01@2x.jpg",
-                mobile: "/assets/images/component-02/Image-01.jpg"
-            }
-        }
-    ];
+        ]
+    };
 }

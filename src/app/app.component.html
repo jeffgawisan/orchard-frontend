@@ -32,9 +32,9 @@
 </section>
 <section class="container">
     <div class="tile-content">
-        <h2>ALL THE LATEST</h2>
+        <h2>{{tileContent.title}}</h2>
         <div class="tile-list">
-            <ng-container *ngFor="let item of tileContents">
+            <ng-container *ngFor="let item of tileContent.list">
                 <app-tile-content [title]="item.title" [description]="item.description" [image]="item.image"></app-tile-content>
             </ng-container>
         </div>
